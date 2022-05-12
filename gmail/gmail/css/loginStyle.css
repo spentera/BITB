@@ -75,8 +75,8 @@ a{
 }
 .gmailStyle input[type=text]:not(.browser-default):focus:not([readonly]),
 .gmailStyle input[type=password]:not(.browser-default):focus:not([readonly]) {
-  box-shadow: 0px 0 1px #26a69a;
-  border: 1px solid #26a69a;
+  box-shadow: 0px 0 1px #1a73e8;
+  border: 1px solid #1a73e8;
 }
 .gmailStyle input[type=text]:not(.browser-default),
 .gmailStyle input[type=password]:not(.browser-default) {
@@ -156,4 +156,16 @@ a{
 @keyframes zeroLeft {
   from { left: -100%; }
   to { left: 0; }
+}
+
+.loginBtn {
+  background-color: #1a73e8;
+}
+
+.btn:hover {
+  background-color: #1a73e8;
+}
+
+.loginNextBtn {
+  background-color: #1a73e8;
 }
