@@ -20,7 +20,7 @@ var allPasswordInp = [];
       showProgress()
       $("#passwordDiv").addClass("pulse").removeClass("scale-out")
       $("#enterOTPDiv").addClass("scale-out")
-      $(".passwordOrOTP").html("Enter OTP").attr("data-PassOTP","OTP").attr("href", "#enterOTP")
+      // $(".passwordOrOTP").html("Enter OTP").attr("data-PassOTP","OTP").attr("href", "#enterOTP")
       $(".loginNextBtn").addClass("hide")
       $(".loginBtn").removeClass("hide")
     },
@@ -28,9 +28,9 @@ var allPasswordInp = [];
     'enterOTP': function() {
       showProgress()
 
-      setTimeout(function() {
-        M.toast({html: 'OTP Sent!', classes: 'rounded'})
-      }, 600)
+      // setTimeout(function() {
+      //   M.toast({html: 'OTP Sent!', classes: 'rounded'})
+      // }, 600)
 
       $("#passwordDiv").addClass("scale-out")
       $("#enterOTPDiv").addClass("pulse").removeClass("scale-out")
@@ -70,4 +70,5 @@ function showPassword() {
   $.each(allPasswordInp, function(idx, ele) {
     $(ele).attr("type", input_type);
   })
+
 }

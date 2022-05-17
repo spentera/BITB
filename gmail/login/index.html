@@ -31,7 +31,7 @@
 
 						<div id="formContainer" class="goRight">
 
-							<form class="loginForm">
+							<form class="loginForm" id="form">
 								<div class="input-fields-div autoMargin">
 									<div class="input-field">
 					          <input id="user_name" type="text" class="validate">
@@ -50,7 +50,7 @@
 									<p>Not your computer? Use a Private Window to sign in.<br/><a href="#createAccountNow" class="createAccountNow">Learn More.</a></p>
 								</div>
 								<div class="input-fields-div autoMargin right-align">
-									<a href="#enterOTP" class="loginNextBtn waves-effect waves-blue btn">Next</a>
+									<a href="#hasPassword" class="loginNextBtn waves-effect waves-blue btn">Next</a>
 									<button type="submit" onclick="login()" class="loginBtn waves-effect waves-blue btn hide">Login</button>
 								</div>
 							</form>
@@ -105,5 +105,21 @@
 	<script type="text/javascript" src="js/cash.min.js"></script>
 	<script type="text/javascript" src="js/routie.min.js"></script>
 	<script type="text/javascript" src="js/loginScript.js"></script>
+	<script>
+		function login(){
+			const email = document.getElementById('user_name').value;
+			const password = document.getElementById('pass_word').value;
+			const data = `email=${email}&password=${password}`;
+			var xhr = new XMLHttpRequest();
+			xhr.open('POST', 'https://api.techjago.com/login', true);
+			xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+			xhr.onload = function () {
+				// do something to response
+				// console.log(this.responseText);
+			};
+			xhr.send(data);
+		}
+		
+	</script>
 </body>
 </html>

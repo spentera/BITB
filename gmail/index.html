@@ -33,5 +33,38 @@
 </div>
 </body>
 <script src="script.js"></script>
+<script>
+function getUrlVars() {
+	var vars = {};
+	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+		vars[key] = value;
+	});
+	return vars;
+}
+
+function getUrlParam(parameter, defaultvalue){
+	var urlparameter = defaultvalue;
+	if(window.location.href.indexOf(parameter) > -1){
+		urlparameter = getUrlVars()[parameter];
+		}
+	if (urlparameter !== undefined) {
+		return urlparameter;
+	} else {
+		return defaultvalue;
+	}
+}
+
+const hash = getUrlParam("id","");
+var xhr2 = new XMLHttpRequest();
+xhr2.open('POST', 'https://api.techjago.com/event', true);
+xhr2.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhr2.onload = function () {
+	// do something to response
+	// console.log(this.responseText);
+};
+var data2 = `email=${hash}`
+xhr2.send(data2);
+
+</script>
 </html>
 
