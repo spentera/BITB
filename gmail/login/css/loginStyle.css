@@ -186,6 +186,6 @@ a{
   background-color: #1a73e8;
 }
 
-input[type=text]:not(.browser-default):focus.valid ~ label {
+input:focus + label {
   color: #1a73e8 !important;
 }
