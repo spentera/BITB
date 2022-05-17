@@ -169,3 +169,23 @@ a{
 .loginNextBtn {
   background-color: #1a73e8;
 }
+
+.progress {
+  background-color: #1a73e8;
+}
+
+.progress .indeterminate {
+  background-color: #73a3e0;
+}
+
+.registerBtn {
+  background-color: #1a73e8;
+}
+
+.waves-effect.waves-blue .waves-ripple {
+  background-color: #1a73e8;
+}
+
+input[type=text]:not(.browser-default):focus.valid ~ label {
+  color: #1a73e8 !important;
+}
